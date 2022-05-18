@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+h1 {
+    margin: 2rem;
+}
+.header {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, min-max(240px, 1fr));
+    align-items: center;
+    text-align: center;
+    border: 1px solid red;
+}
+
+.odin-logo {
+    width: 150px;
+    margin: 0 auto;
+}
+
+.gutter {
+    height: 100%;
+    border: 1px solid red;
+}
+.recipe-image {
+    background-image:url('https://images.unsplash.com/photo-1600803734709-83f30a78e312?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032');
+    height: 700px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title {
+    z-index: 10;
+    font-size: 3rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: rgb(255, 246, 194);
+}
+.recipe-body {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, min-max(240px, 1fr));
+    align-items: center;
+    justify-content: center;
+}
+.ingredients {
+    padding: 2rem;
+    margin: 2rem;
+}
+.steps {
+    padding: 5rem;
+    line-height: 1.5rem;
+    margin: 2rem;
+}
+.card {
+    border-radius: 20px;
+    box-shadow: 0 0 5px hsl(0, 0%, 43%);
+}
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+ul {
+    text-indent: 50px;
+    list-style: none;
+}
+li {
+    margin-block: 1.2rem;
+}
+
+@media screen and (min-width: 600px) {
+    .header {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .odin-logo {
+        margin: left;
+    }
+    .title {
+        font-size: 5rem;
+        letter-spacing: 0.15ch;
+    }
+    .recipe-body {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .span-2-4 {
+        grid-column: span 2 / auto;
+    }
+}
